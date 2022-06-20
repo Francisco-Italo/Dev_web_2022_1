@@ -13,9 +13,11 @@ const ListStudentPage = () =>
     <FirebaseContext.Consumer>
         { 
             (firebase) => { 
-                <RestrictPage isLogged={firebase.getUser() != null}>
-                    <ListStudent firebase={firebase}/>
-                </RestrictPage>
+                return(
+                    <RestrictPage isLogged={firebase.getUser() != null}>
+                        <ListStudent firebase={firebase}/>
+                    </RestrictPage>
+                )
             }
         }
     </FirebaseContext.Consumer>
