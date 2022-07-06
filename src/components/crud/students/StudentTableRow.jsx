@@ -21,7 +21,7 @@ const StudentTableRow = (props) =>
                   .catch(error=>console.log(error))
                   */
             FirebaseStudentService.delete(
-                props.firestore,
+                props.firebase.getFirestoreDb(),
                 (ok) => {
                     if(ok) alert('Estudante ' + _id + ' apagado com sucesso!')
                 },
