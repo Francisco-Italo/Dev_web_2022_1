@@ -22,7 +22,7 @@ const ProfessorTableRow = (props) =>
         if (window.confirm(`Deseja excluir o elemento de ID: ${_id}?`)) {
             console.log("Deu certo enfim!")
             FirebaseProfessorService.delete(
-                props.firestore,
+                props.firebase.getFirestoreDb(),
                 ()=>{
                     alert('Professor ' + _id + ' apagado com sucesso!')
                 },
