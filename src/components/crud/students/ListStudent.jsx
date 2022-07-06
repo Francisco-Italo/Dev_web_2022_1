@@ -86,7 +86,7 @@ const ListStudent = (props) =>
                 student={student} 
                 key={i} 
                 deleteStudent={exclude}
-                firebase={props.firebase.getFirestoreDb()} 
+                firebase={props.firebase} 
                 />
 
             }
